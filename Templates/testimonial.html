@@ -1,0 +1,72 @@
+{% extends 'index.html' %}
+{%load static%}
+{% block title%} Testimonial {%endblock%}
+{%block content%}
+
+   <!-- Testimonials Section -->
+    <section class="testimonials-12 testimonials section" id="testimonials">
+        <!-- Section Title -->
+        <div class="container section-title" data-aos="fade-up">
+          <h2 style="text-align: center;">TESTIMONIALS</h2>
+        </div><!-- End Section Title -->
+       
+        <div class="testimonial-wrap">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-6 mb-4 mb-md-4">
+                <div class="testimonial">
+                  <img src="{% static 'Static\assets\img\IMG-20241127-WA0009.jpg' %}" alt="Testimonial author" >
+                  <blockquote>
+                    <p>
+                     "This app has transformed the way I manage my farm. The 
+                       crop advice have made planning my planting and harvesting much easier, leading to a more 
+                      successful harvest"
+                    </p>
+                  </blockquote>
+                  <p class="client-name">Okunga Michael</p>
+                </div>
+              </div>
+              <div class="col-md-6 mb-4 mb-md-4">
+                <div class="testimonial">
+                  <img src="{% static 'Static\assets\img\IMG-20241127-WA0010.jpg' %}" alt="Testimonial author"> 
+                  <blockquote>
+              
+                    <p>
+                      "As a smallholder, I've struggled to stay updated on market prices. This app gives me real-time information on what’s happening in the market, allowing me to sell my produce
+                       at better rates."
+                    </p>
+                  </blockquote>
+                  <p class="client-name">Wafula Birure</p>
+                </div>
+              </div>
+              <div class="col-md-6 mb-4 mb-md-4">
+                <div class="testimonial">
+          <img src="{%static 'Static\assets\img\IMG-20241127-WA0012.jpg'%}"alt="Testimonial author">
+                  <blockquote>
+                    <p>
+                      "The market insights ensure I sell my vegetables at the best prices. It's like having a farming assistant in my pocket. 
+                      Thanks to this app, my farm is thriving, and I feel more confident about the future!"
+                    </p>
+                  </blockquote>
+                  <p class="client-name">Betty Chepkirui</p>
+                </div>
+              </div>
+              <div class="col-md-6 mb-4 mb-md-4">
+                <div class="testimonial">
+                  <img src="{% static 'Static\assets\img\IMG-20241127-WA0008.jpg' %}" alt="Testimonial author">
+                  <blockquote>
+                    <p>
+                      
+                      "The pest detection feature saved me so much time and money. The app quickly identified the issue in my crops, and the treatment suggestions helped me act fast,
+                       preventing a potential loss."
+                    </p>
+                  </blockquote>
+                  <p class="client-name">Muiga Dan</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section><!-- /Testimonials Section -->
+   
+{% endblock %}
