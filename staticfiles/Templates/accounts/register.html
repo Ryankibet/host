@@ -1,0 +1,112 @@
+{% extends 'index.html' %}
+{% load static %}
+{% block title %}Register{% endblock %}
+{% block content %}
+
+{% if messages %}
+<div class="container mt-3">
+  {% for message in messages %}
+    <div class="alert {% if message.tags == 'error' %}alert-danger{% else %}alert-success{% endif %}">
+      {{ message }}
+    </div>
+  {% endfor %}
+</div>
+{% endif %}
+
+<style>
+    .input-group .form-control,
+    .input-group .form-select {
+        height: 50px;
+        border-radius: 0;
+    }
+
+    .input-group-text {
+        background-color: white;
+        border-right: none;
+    }
+
+    .form-control, .form-select {
+        border-left: none;
+    }
+
+    .input-group {
+        border: 1px solid #ced4da;
+        border-radius: 8px;
+        overflow: hidden;
+    }
+
+    .btn-primary {
+        height: 50px;
+        font-weight: bold;
+    }
+</style>
+
+
+<link rel="stylesheet" href="{% static 'Static/assets/css/register.css' %}">
+
+<div class="d-flex justify-content-center align-items-center" style="min-height: 100vh; background: #f5f7fa;">
+  <div class="card shadow-sm border-0" style="max-width: 400px; width: 100%; border-radius: 12px;">
+    <div class="card-body p-4">
+      
+      <!-- Icon -->
+      <div class="text-center mb-3">
+        <img src="{% static 'Static/assets/img/sushobhan-badhai-LrPKL7jOldI-unsplash.jpg' %}" 
+             alt="Logo" style="height: 70px; border-radius: 8px;">
+      </div>
+
+      <h4 class="text-center mb-1">Create Account</h4>
+      <p class="text-center text-muted mb-4">Get started with your free account</p>
+
+      <form method="post">
+        {% csrf_token %}
+
+     <!-- Username -->
+	 <div class="mb-3 input-group">
+        <span class="input-group-text"><i class="fa fa-user"></i></span>
+        <input name="username" class="form-control" placeholder="Username" required>
+    </div>
+
+    <!-- Email -->
+    <div class="mb-3 input-group">
+        <span class="input-group-text"><i class="fa fa-envelope"></i></span>
+        <input name="email" class="form-control" placeholder="Email address" type="email" required>
+    </div>
+
+    <!-- Phone -->
+    <div class="mb-3 input-group">
+        <span class="input-group-text"><i class="fa fa-phone"></i></span>
+        <select class="form-select" style="max-width: 90px;">
+            <option selected>+254</option>
+            <option>+255</option>
+            <option>+256</option>
+        </select>
+        <input name="phone" class="form-control" placeholder="Phone number" type="text" required>
+    </div>
+
+    <!-- Password -->
+    <div class="mb-3 input-group">
+        <span class="input-group-text"><i class="fa fa-lock"></i></span>
+        <input name="password" class="form-control" placeholder="Create password" type="password" required>
+    </div>
+
+    <!-- Confirm Password -->
+    <div class="mb-4 input-group">
+        <span class="input-group-text"><i class="fa fa-lock"></i></span>
+        <input name="confirm_password" class="form-control" placeholder="Confirm password" type="password" required>
+    </div>
+        <!-- Submit -->
+        <div class="d-grid mb-3">
+          <button type="submit" class="btn btn-primary fw-bold">Create Account</button>
+        </div>
+
+        <!-- Login Link -->
+        <p class="text-center mb-0">
+          Have an account? <a href="{% url 'accounts:login' %}" class="text-decoration-none">Log In</a>
+        </p>
+      </form>
+
+    </div>
+  </div>
+</div>
+
+{% endblock %}

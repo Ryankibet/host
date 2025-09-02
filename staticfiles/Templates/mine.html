@@ -1,0 +1,67 @@
+{% extends 'index.html' %}
+{%load static%}
+{% block title%} Team {%endblock%}
+{%block content%}
+ 
+<!DOCTYPE html>
+<html lang="en">
+
+<body>
+
+    
+    <h1 style="text-align: center;">Meet Our Team</h1>
+    <p style="text-align: center;">Dedicated professionals working to make agriculture smarter</p>
+    
+
+
+    <main class="container">
+        <div class="team-card">
+            <img src="{%static 'Static\assets\img\ryan.jpg'%}" alt="Team Member Photo">
+            <h3>Ryan Kibet</h3>
+            <p>Founder & CEO</p>
+            <p>Leading innovation in smart farming.</p>
+        </div>
+        <div class="team-card">
+            <img src="{%static 'Static\assets\img\faith.jpg'%}" alt="Team Member Photo">
+            <h3>Faith Chepkemoi</h3>
+            <p>Head of Operations</p>
+            <p>Ensuring seamless functionality.</p>
+        </div>
+        <div class="team-card">
+            <img src="{%static 'Static\assets\img\openda.jpg'%}" alt="Team Member Photo">
+            <h3>Openda Oluoch</h3>
+            <p>Software Engineer</p>
+            <p>Building robust solutions for farmers.</p>
+        </div>
+        <div class="team-card">
+            <img src="{%static 'Static\assets\img\michael.jpg'%}" alt="Team Member Photo">
+            <h3>Michael Kiplimo</h3>
+            <p>Agriculture Specialist</p>
+            <p>Connecting tech with farming needs.</p>
+        </div>
+    </div>
+    <div class="team-card">
+        <img src="{%static 'Static\assets\img\mitchelle.jpg'%}" alt="Team Member Photo">
+        <h3>Mithchelle Nyambura </h3>
+        <p>Agronomist Consultant</p>
+        <p>Providing expertise on crop management and sustainable practices.</p>
+    </div>
+</div>
+<div class="team-card">
+    <img src="{%static 'Static\assets\img\joshua.jpg'%}" alt="Team Member Photo">
+    <h3>Joshua Ochari</h3>
+    <p>Customer Success Manager</p>
+    <p>Building strong relationships with farmers and users to ensure satisfaction.</p>
+</div>
+</div>
+
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2024 Agri App. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
+
+{%endblock%}
