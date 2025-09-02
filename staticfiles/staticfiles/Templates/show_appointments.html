@@ -1,0 +1,54 @@
+{% extends 'index.html' %}
+{%load static%}
+{% block title%} Show Appointments {%endblock%}
+{%block content%}
+<table >
+<thead>
+    <style>
+        table {
+            width: 100%; /* Adjust the width of the table */
+            border-collapse: collapse;
+            font-size: 15px; /* Increase font size */
+        }
+        th, td {
+            border: 1px solid #ddd; /* Add borders to table cells */
+            padding: 7px; /* Add padding for better spacing */
+            text-align: left;
+        }
+        th {
+            background-color: #f4f4f4; /* Light background for header */
+            font-size: 13px; /* Slightly larger font for headers */
+        }
+        tr:hover {
+            background-color: #f1f1f1; /* Highlight row on hover */
+        }
+    </style>
+    <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Phone</th>
+        <th>Message</th>
+        <th>Date</th>
+        <th>Action</th>
+    </tr>
+</thead>
+<tbody>
+    {% for appointment in appointments %}
+    <tr>
+        <td>{{appointment.name}}</td>
+        <td>{{appointment.email}}</td>
+        <td>{{appointment.phone}}</td>
+        <td>{{appointment.message}}</td>
+        <td>{{appointment.date}}</td>
+        <td>
+            <a href="{% url 'myapp:update_appointment' appointment.id %}" class="btn btn-primary">Edit</a>
+            <a href="{% url 'myapp:delete_appointment' appointment.id %}" class="btn btn-danger">Delete</a>
+            <a href="{% url 'myapp:pay' %}" class="btn btn-success">Pay</a>
+            
+        </td>
+    </tr>
+    {% endfor %}
+</tbody>
+
+</table>
+{%endblock%}
