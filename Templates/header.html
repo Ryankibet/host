@@ -33,7 +33,9 @@
                     <a href="#" class="logout-link" onclick="this.closest('form').submit();">Log Out</a>
                 </form>
             {% else %}
-            <a href="{% url 'accounts:login' %}">Log In</a>
+            <a href="{% url 'accounts:login' %}" style="margin-right:15px;">Log In</a>
+            <a href="{% url 'accounts:register' %}">Register</a>
+
             {% endif %}
           </nav>
           
