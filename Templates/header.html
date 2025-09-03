@@ -35,19 +35,6 @@
     </nav>
 
     <!-- Right-side links (visible only on desktop) -->
-    <div class="social-links d-none d-md-flex align-items-center">
-      <nav>
-        {% if user.is_authenticated %}
-          <form method="POST" action="{% url 'accounts:logout' %}">
-            {% csrf_token %}
-            <a href="#" class="logout-link" onclick="this.closest('form').submit();">Log Out</a>
-          </form>
-        {% else %}
-          <a href="{% url 'accounts:login' %}" style="margin-right:15px;">Log In</a>
-          <a href="{% url 'accounts:register' %}">Register</a>
-        {% endif %}
-      </nav>
-    </div>
 
   </div>
 </header>
